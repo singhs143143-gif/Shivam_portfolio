@@ -86,7 +86,7 @@ const skillGroups = [
   { title: "Data Science", icon: BarChart3, skills: ["Pandas", "NumPy", "Data Cleaning", "EDA", "Statistical Analysis", "SMOTE"] },
   { title: "Machine Learning", icon: BrainCircuit, skills: ["Scikit-learn", "XGBoost", "Random Forest", "Gradient Boosting", "Classification", "Regression", "Clustering", "Model Evaluation"] },
   { title: "AI", icon: Database, skills: ["Explainable AI", "SHAP", "LIME", "Predictive Analytics", "PCA", "Isolation Forest"] },
-  { title: "Tools", icon: Code2, skills: ["Git", "GitHub", "Postman", "Jupyter Notebook", "Google Colab", "Power BI", "Tableau"] },
+  { title: "Tools", icon: Code2, skills: ["Git", "GitHub", "Postman", "Jupyter Notebook", "Google Colab", "Power BI"] },
 ];
 
 export default function Index() {
@@ -139,7 +139,7 @@ export default function Index() {
             <a href="#projects" className="button button-primary">View my projects <ArrowDownRight size={17} /></a>
             <a href="#contact" className="button button-quiet">Contact me <ChevronRight size={17} /></a>
           </div>
-          <div className="hero-note"><span></span> B.E Computer Engineering &nbsp;·&nbsp; 7th Semester</div>
+          <div className="hero-note"><span></span> B.E Computer Engineering &nbsp;·&nbsp; Fresher</div>
         </div>
         <div className="data-visual" aria-label="Abstract data visualization">
           <div className="visual-orbit orbit-one"></div><div className="visual-orbit orbit-two"></div>
@@ -158,7 +158,7 @@ export default function Index() {
         <div className="section-label">01 — INTRODUCTION</div>
         <div className="about-layout">
           <div><h2>Curious by nature.<br /><em>Analytical by choice.</em></h2></div>
-          <div className="about-content"><p>I am a Computer Engineering undergraduate (7th Semester) with a growing passion for finding clarity in data. My focus is on learning how data analysis, machine learning, and artificial intelligence can be thoughtfully applied to practical problems.</p><p>I&apos;m building my foundation through analytical projects and continuous learning—always interested in asking better questions, exploring patterns, and turning ideas into useful outcomes.</p></div>
+          <div className="about-content"><p>I am a Computer Science undergraduate with a growing passion for finding clarity in data. My focus is on learning how data analysis, machine learning, and artificial intelligence can be thoughtfully applied to practical problems.</p><p>I&apos;m building my foundation through analytical projects and continuous learning—always interested in asking better questions, exploring patterns, and turning ideas into useful outcomes.</p></div>
         </div>
         <div className="profile-card">
           <div className="profile-item"><span>Education</span><strong>B.E — Computer Engineering</strong></div><div className="profile-item"><span>College</span><strong>Government Engineering College, Palanpur</strong></div><div className="profile-item"><span>Career Focus</span><strong>Data Science · AI · Machine Learning</strong></div>
@@ -180,7 +180,7 @@ export default function Index() {
         <div className="project-grid">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-top"><span>{project.number}</span><button onClick={() => setActiveProject(project)} aria-label={`View details for ${project.title}`}><ArrowUpRight size={19}/></button></div><h3>{project.title}</h3><p>{project.description}</p><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><button className="details-link" onClick={() => setActiveProject(project)}>View details <ChevronRight size={16}/></button></article>)}</div>
       </section>
 
-      <section id="education" className="section-shell education-section"><div className="section-label">05 — EDUCATION</div><div className="education-card"><div className="education-mark">SS</div><div><span>UNDERGRADUATE / 7TH SEMESTER</span><h2>B.E — Computer Engineering</h2><p>Government Engineering College, Palanpur</p></div><div className="education-line"></div><p className="education-note">Building a strong base in computer engineering while actively developing practical skills in data, machine learning, and AI.</p></div></section>
+      <section id="education" className="section-shell education-section"><div className="section-label">05 — EDUCATION</div><div className="education-card"><div className="education-mark">SS</div><div><span>FRESHER</span><h2>B.E — Computer Engineering</h2><p>Government Engineering College, Palanpur</p></div><div className="education-line"></div><p className="education-note">Building a strong base in computer engineering while actively developing practical skills in data, machine learning, and AI.</p></div></section>
 
       <section id="contact" className="section-shell contact-section"><div className="contact-intro"><div className="section-label">06 — CONTACT</div><h2>Let&apos;s make<br />something <em>useful.</em></h2><p>I&apos;m always interested in learning, building data-driven projects, and connecting with people working in Data Science, AI, and Machine Learning.</p><div className="contact-links"><a href="mailto:singhs79094@gmail.com"><Mail size={17}/> singhs79094@gmail.com</a><a href="tel:+919558837436">+91-955-883-7436</a></div></div><form className="contact-form" onSubmit={handleContact}><label>Name<input required name="name" placeholder="Your name" /></label><label>Email<input required type="email" name="email" placeholder="you@example.com" /></label><label>Message<textarea required name="message" rows={4} placeholder="Tell me a little about your idea..." /></label><button type="submit" className="button button-primary">Open email client <Send size={16}/></button><small>Your message will open in your default email client.</small></form></section>
 
