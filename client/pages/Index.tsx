@@ -86,7 +86,7 @@ const skillGroups = [
   { title: "Data Science", icon: BarChart3, skills: ["Pandas", "NumPy", "Data Cleaning", "EDA", "Statistical Analysis", "SMOTE"] },
   { title: "Machine Learning", icon: BrainCircuit, skills: ["Scikit-learn", "XGBoost", "Random Forest", "Gradient Boosting", "Classification", "Regression", "Clustering", "Model Evaluation"] },
   { title: "AI", icon: Database, skills: ["Explainable AI", "SHAP", "LIME", "Predictive Analytics", "PCA", "Isolation Forest"] },
-  { title: "Tools", icon: Code2, skills: ["Git", "GitHub", "Postman", "Jupyter Notebook", "Google Colab", "Power BI"] },
+  { title: "Tools", icon: Code2, skills: ["Git", "GitHub", "Jupyter Notebook", "Power BI"] },
 ];
 
 export default function Index() {
@@ -176,7 +176,7 @@ export default function Index() {
       </section>
 
       <section id="projects" className="section-shell projects-section">
-        <div className="section-heading"><div><div className="section-label">04 — SELECTED WORK</div><h2>Featured<br /><em>projects.</em></h2></div><p>Three areas of exploration at the intersection of data, patterns, and meaningful decisions.</p></div>
+        <div className="section-heading"><div><div className="section-label">04 — SELECTED WORK</div><h2>Featured<br /><em>projects.</em></h2></div><p>Turning data into intelligence and machine learning into meaningful solutions.</p></div>
         <div className="project-grid">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-top"><span>{project.number}</span><button onClick={() => setActiveProject(project)} aria-label={`View details for ${project.title}`}><ArrowUpRight size={19}/></button></div><h3>{project.title}</h3><p>{project.description}</p><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><button className="details-link" onClick={() => setActiveProject(project)}>View details <ChevronRight size={16}/></button></article>)}</div>
       </section>
 
