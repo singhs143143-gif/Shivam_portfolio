@@ -20,6 +20,7 @@ const projects = [
   {
     number: "01",
     title: "Intelligent Banking Transaction & Fraud Detection",
+    liveUrl: "https://bank-fraud-prediction-skcqdhqfj4ukjmr6uc6bxj.streamlit.app/",
     description:
       "A fraud detection pipeline built in Python using Pandas, NumPy, and Scikit-learn, preprocessing 280K+ banking transactions across 30+ features with SMOTE class imbalance handling and XGBoost classification.",
     tags: [
@@ -45,6 +46,7 @@ const projects = [
   {
     number: "02",
     title: "Customer Churn Prediction & Explainable Analytics",
+    liveUrl: "https://customer-churn-prediction-3szdjirybf5hqjk3a5anl6.streamlit.app/",
     description:
       "A machine learning customer churn classification pipeline on 7K+ records and 20+ behavioral/account features, evaluated using 5-fold cross-validation and interpreted with SHAP Explainable AI.",
     tags: [
@@ -69,6 +71,7 @@ const projects = [
   {
     number: "03",
     title: "Expense Tracker REST API (In Progress)",
+    liveUrl: null,
     description:
       "A backend REST API with full CRUD operations for managing users, expense categories, and transactions, featuring JWT-based authentication and relational SQLite/SQLAlchemy schemas.",
     tags: ["Python", "Flask", "SQLite", "SQLAlchemy", "JWT", "Postman", "GitHub"],
@@ -177,7 +180,7 @@ export default function Index() {
 
       <section id="projects" className="section-shell projects-section">
         <div className="section-heading"><div><div className="section-label">04 — SELECTED WORK</div><h2>Featured<br /><em>projects.</em></h2></div><p>Turning data into intelligence and machine learning into meaningful solutions.</p></div>
-        <div className="project-grid">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-top"><span>{project.number}</span><button onClick={() => setActiveProject(project)} aria-label={`View details for ${project.title}`}><ArrowUpRight size={19}/></button></div><h3>{project.title}</h3><p>{project.description}</p><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><button className="details-link" onClick={() => setActiveProject(project)}>View details <ChevronRight size={16}/></button></article>)}</div>
+        <div className="project-grid">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-top"><span>{project.number}</span><button onClick={() => setActiveProject(project)} aria-label={`View details for ${project.title}`}><ArrowUpRight size={19}/></button></div><h3>{project.title}</h3><p>{project.description}</p><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><div className="project-actions"><button className="details-link" onClick={() => setActiveProject(project)}>View details <ChevronRight size={16}/></button>{project.liveUrl && <a className="live-link" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Open live project <ArrowUpRight size={15}/></a>}</div></article>)}</div>
       </section>
 
       <section id="education" className="section-shell education-section"><div className="section-label">05 — EDUCATION</div><div className="education-card"><div className="education-mark">SS</div><div><span>FRESHER</span><h2>B.E — Computer Engineering</h2><p>Government Engineering College, Palanpur</p></div><div className="education-line"></div><p className="education-note">Building a strong base in computer engineering while actively developing practical skills in data, machine learning, and AI.</p></div></section>
@@ -186,7 +189,7 @@ export default function Index() {
 
       <footer><a href="#home" className="brand">S<span>.</span>S</a><div><strong>Shivam Singh</strong><p>Data Science &nbsp;|&nbsp; Artificial Intelligence &nbsp;|&nbsp; Machine Learning</p></div><div className="footer-links"><a href="mailto:singhs79094@gmail.com" aria-label="Email Shivam Singh"><Mail size={18}/></a><a href="#contact" aria-label="GitHub profile placeholder" className="brand-mark">GH</a><a href="#contact" aria-label="LinkedIn profile placeholder" className="brand-mark">in</a></div><small>© {new Date().getFullYear()} Shivam Singh. Made with intention.</small></footer>
 
-      {activeProject && <div className="modal-backdrop" onMouseDown={() => setActiveProject(null)} role="presentation"><section className="project-modal" role="dialog" aria-modal="true" aria-label={activeProject.title} onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" onClick={() => setActiveProject(null)} aria-label="Close project details"><X size={20}/></button><span className="modal-number">PROJECT {activeProject.number}</span><h2>{activeProject.title}</h2><div className="modal-details"><div><span>Overview</span><p>{activeProject.description}</p></div><div><span>Problem statement</span><p>{activeProject.problem}</p></div><div><span>Approach</span><p>{activeProject.approach}</p></div><div><span>Expected outcome</span><p>{activeProject.outcome}</p></div></div><div className="tag-list">{activeProject.tags.map((tag) => <span key={tag}><Check size={12}/>{tag}</span>)}</div></section></div>}
+      {activeProject && <div className="modal-backdrop" onMouseDown={() => setActiveProject(null)} role="presentation"><section className="project-modal" role="dialog" aria-modal="true" aria-label={activeProject.title} onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" onClick={() => setActiveProject(null)} aria-label="Close project details"><X size={20}/></button><span className="modal-number">PROJECT {activeProject.number}</span><h2>{activeProject.title}</h2><div className="modal-details"><div><span>Overview</span><p>{activeProject.description}</p></div><div><span>Problem statement</span><p>{activeProject.problem}</p></div><div><span>Approach</span><p>{activeProject.approach}</p></div><div><span>Expected outcome</span><p>{activeProject.outcome}</p></div></div><div className="tag-list">{activeProject.tags.map((tag) => <span key={tag}><Check size={12}/>{tag}</span>)}</div>{activeProject.liveUrl && <a className="live-link modal-live-link" href={activeProject.liveUrl} target="_blank" rel="noopener noreferrer">Open live project <ArrowUpRight size={16}/></a>}</section></div>}
     </main>
   );
 }
